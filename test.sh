@@ -1,12 +1,15 @@
-#!/bin/sh
+#!/bin/bash
 
-echo hello world
+SNAKE="\u25A0"
 
-case $1 in
-	ahmad*) test=1;;
-	mamad*) test=2;;
-	sara*)  test=3;;
-	sara)   test=4;;
-esac
+echo "Creating snake world"
+for i in {1..3}
+do
+	printf .
+	sleep 0.5
+	printf "\c"
+	sleep 0.5
+done
 
-echo the result is &test
+
+printf "%b\n" $SNAKE
